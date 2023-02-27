@@ -21,11 +21,12 @@ ui <- fluidPage(
   # Sidebar with a dropdown menu for breed
   sidebarLayout(
     sidebarPanel(
-      selectInput(
+        radioButtons(
         inputId = "breed",
         label = "Breed:",
-        choices = unique(dogs$BREED),
-        selected = "Shih Tzu" # default selection
+        choiceNames= c("Mischling klein", "Chihuahua", "Labrador Retriever","Jack Russel Terrier"),
+        choiceValues = c("Mischling klein", "Chihuahua", "Labrador Retriever","Jack Russel Terrier"),
+        selected = "Jack Russel Terrier" # default selection
       ),
     ),
 
